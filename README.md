@@ -1,6 +1,6 @@
 # React "Add Option" app
 
-A simple "Add option" app, with React, using [Babel](https://babeljs.io/) to convert JSX into executable javascript code (test)
+A simple "Add option" app, with React.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ git clone https://github.com/pankaryp/React-add-option-app-babeltest.git
 Open the live server on _public_ folder
 
 ```
-cd react-add-option-app-babetest/public
+cd react-add-option-app/public
 
 live-server
 ```
