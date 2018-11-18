@@ -3,11 +3,24 @@
   "version": "1.0.0",
   "description": "An indecision Add option app",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "serve": "live-server public/",
+    "build": "webpack --watch"
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "live-server": "^1.2.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   }
 }
