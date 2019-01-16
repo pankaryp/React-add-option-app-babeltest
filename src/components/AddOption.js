@@ -2,15 +2,13 @@ import React from 'react';
 
 // AddOptions Component
 class AddOptions extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleAddOption = this.handleAddOption.bind(this);
-        this.state = {
-            error: undefined
-        };
+
+    // With the transform-class-properties babel plugin
+    state = {
+        error: undefined
     }
 
-    handleAddOption(e) {
+    handleAddOption = (e) => {
         e.preventDefault();
 
         const option = e.target.elements.option.value.trim();
@@ -23,9 +21,7 @@ class AddOptions extends React.Component {
         });
 
         e.target.elements.option.value = "";
-
-
-    }
+    };
 
     render() {
         return (
