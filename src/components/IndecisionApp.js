@@ -4,13 +4,16 @@ import AddOptions from './AddOption';
 import Options from './Options';
 import Action from './Action';
 import Header from './Header';
+import OptionModal from './OptionModal';
 
 // IndecisionApp Component (Parent)
 class IndecisionApp extends React.Component {
 
     // With the transform-class-properties babel plugin
     state = {
-        options: ['thing one', 'thing two']
+        options: ['thing one', 'thing two'],
+        selectedOption: undefined, 
+        modalWindow: true
     }
 
     // Lifecycle methods
@@ -49,7 +52,14 @@ class IndecisionApp extends React.Component {
     handlePick = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
-        alert(option);
+        
+        // Pick a random option and set the modalWindow state back to true
+        this.setState(() => {
+            return {
+                selectedOption: option,
+                modalWindow: true
+            }
+        });
     };
 
     // handleDeleteOptions
@@ -87,6 +97,19 @@ class IndecisionApp extends React.Component {
         });
     };
 
+    // handleClearSelectedOption
+    handleClearSelectedOption = () => {
+
+        // Clear selectedOption array and Close modal window
+        this.setState(() => {
+            return {
+                selectedOption: [],
+                modalWindow: false
+            }
+        });
+        
+    };
+
     render() {
         const title = "Indecision";
         const subTitle = "Put your life in the hands of the computer";
@@ -105,6 +128,11 @@ class IndecisionApp extends React.Component {
                 />
                 <AddOptions 
                     handleAddOption={this.handleAddOption}
+                />
+                <OptionModal 
+                    selectedOption={this.state.selectedOption}
+                    handleClearSelectedOption={this.handleClearSelectedOption}
+                    modalWindowIsOpen={this.state.modalWindow}
                 />
             </div>
         );
