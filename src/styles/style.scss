@@ -1,2 +1,7 @@
-@import './base/base';
+@import './base/_settings';
+@import './base/_base';
+@import './components/_container';
 @import './components/_header';
+@import './components/_button';
+@import './components/widget';
+@import './components/form';

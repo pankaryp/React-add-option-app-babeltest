@@ -5,12 +5,13 @@ const Option = (props) => (
     
     <div>   
         <ul>
-            <li>{props.optionText}</li>
+            <li className="widget-content__item">{props.optionText}</li>
             <button 
+                className="button button--link button--item"
                 onClick={(e) => {
                     props.handleDeleteOne(props.optionText);
                 }}
-            >X</button>
+            >Remove</button>
         </ul>
     </div>
 );

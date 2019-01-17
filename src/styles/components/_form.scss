@@ -1,0 +1,21 @@
+.form {
+    width: 70%;
+    margin-right: 65px;
+    margin-top: 10px;
+    height: 38px;
+    background-color: #323243;
+    border: none;
+    border-bottom: .3rem solid darken(#323243, 10%);
+    color: white;
+    font-size: $m-size;
+    font-weight: 600;
+}
+
+.form:focus {
+    outline: none;
+}
+
+.form__hr {
+    border-color: $off-white;
+    opacity: .3;
+}

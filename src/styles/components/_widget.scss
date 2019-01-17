@@ -1,0 +1,22 @@
+// Widget Header
+.widget-header {
+    background-color: $blue;
+    color: $off-white;
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size;
+}
+
+.widget-header__title {
+    margin: 0;
+}
+
+.widget-content {
+    background-color: $light-blue;
+    color: white;
+    padding: $m-size;
+}
+
+.widget-content__item {
+    padding-bottom: 10px;
+}

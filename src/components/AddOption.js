@@ -3,7 +3,7 @@ import React from 'react';
 // AddOptions Component
 class AddOptions extends React.Component {
 
-    // With the transform-class-properties babel plugin
+    // (With the transform-class-properties babel plugin)
     state = {
         error: undefined
     }
@@ -25,10 +25,14 @@ class AddOptions extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="widget-content">
+                <hr className="form__hr"></hr>
                 <form onSubmit={this.handleAddOption}>
-                    <input type="text" name="option"/>
-                    <button>Add option</button>
+                    <input 
+                        className="form"
+                        type="text" 
+                        name="option"/>
+                    <button className="button">Add option</button>
                     <p>{this.state.error}</p>
                 </form>
             </div>
