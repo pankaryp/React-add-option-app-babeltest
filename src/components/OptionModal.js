@@ -16,10 +16,18 @@ const OptionModal = (props) => {
             isOpen={CheckModalWindowIsOpen}
             onRequestClose={props.handleClearSelectedOption}
             contentLabel="Selected option"
+            style={{
+                overlay: {
+                    backgroundColor: 'rgba(255, 255, 255, 0.4)'
+                }
+            }}
+            closeTimeoutMS={200}
+            className="modal"
         >
-            <h3>Selected Option</h3>
-            <p>{props.selectedOption}</p>
+            <h3 className="modal__title">Selected Option</h3>
+            <p className="modal__body">{props.selectedOption}</p>
             <button
+                className="button"
                 onClick={props.handleClearSelectedOption}
             >Okey</button>
         </Modal>
