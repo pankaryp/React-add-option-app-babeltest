@@ -1,7 +1,7 @@
 {
-  "name": "indecision-app",
+  "name": "react-add-option-app",
   "version": "1.0.0",
-  "description": "An indecision Add option app",
+  "description": "A simple Add option app, with React",
   "main": "index.js",
   "scripts": {
     "serve": "live-server public/",
